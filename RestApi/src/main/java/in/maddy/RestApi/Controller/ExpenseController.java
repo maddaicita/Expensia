@@ -1,5 +1,6 @@
 package in.maddy.RestApi.Controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
@@ -24,6 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin(origins = "*") // Allow requests from any origin(for now)
 public class ExpenseController {
 
     /** Service layer dependency for retrieving expenses. */
